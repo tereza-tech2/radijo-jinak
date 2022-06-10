@@ -24,8 +24,6 @@ import Logo from './icons/icon-logo';
 import MobileMenu from './mobile-menu';
 import Footer from './footer';
 import React from 'react';
-import DemoButton from './hms/demo-cta';
-import RoomCta from './hms/demo-cta/room-cta';
 import { hmsConfig } from './hms/config';
 import ViewSource from './view-source';
 
@@ -74,15 +72,6 @@ export default function Layout({
                 </a>
               ))}
             </div>
-
-            {(hmsConfig.hmsIntegration && isLive && !disableCta.includes(activeRoute)) ||
-            activeRoute === '/' ? (
-              <div className={cn(styles['header-right'])}>
-                {activeRoute === '/' ? <DemoButton /> : <RoomCta />}
-              </div>
-            ) : (
-              <div />
-            )}
           </header>
         )}
         <ViewSource />
