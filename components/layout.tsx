@@ -25,7 +25,6 @@ import MobileMenu from './mobile-menu';
 import Footer from './footer';
 import React from 'react';
 import { hmsConfig } from './hms/config';
-import ViewSource from './view-source';
 
 type Props = {
   children: React.ReactNode;
@@ -74,7 +73,6 @@ export default function Layout({
             </div>
           </header>
         )}
-        <ViewSource />
         <div className={styles.page}>
           <main className={styles.main} style={layoutStyles}>
             <SkipNavContent />
